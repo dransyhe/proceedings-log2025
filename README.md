@@ -70,6 +70,6 @@ The PMLR editorial team will review your submission and publish the proceedings 
 
 - [PMLR Specification](https://proceedings.mlr.press/spec.html) - Detailed specification
 - [PMLR FAQ](https://proceedings.mlr.press/faq.html) - Frequently asked questions
-- [LaTeX Style Files](http://www.jmlr.org/papers/format/pmlr-v1.sty) - Official style files
+- [JMLR LaTeX Style Files](https://ctan.org/pkg/jmlr) - Official style files
 
 For questions or clarifications, please contact the PMLR editors at proceedings@mlr.press.
