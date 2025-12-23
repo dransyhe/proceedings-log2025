@@ -38,6 +38,8 @@ Paper identifiers should follow the format `lastnameYY` where `lastname` is the 
 
 ### Paper and Supplementary Files
 
+PDFs and supplementary files must be placed in the root folder of this GitHub repository, together with the BibTeX file.
+
 - Paper PDFs must have filenames corresponding to their BibTeX entry identifiers (e.g., `reid25a.pdf`)
 - Supplementary files must begin with the same ID plus `-supp` suffix (e.g., `reid25a-supp.pdf`)
 - For software links, add a `software` field to the BibTeX entry with the URL
