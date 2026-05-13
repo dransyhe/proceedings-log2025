@@ -1,0 +1,96 @@
+---
+booktitle: Proceedings of the Fourth Learning on Graphs Conference
+conference_number: '4'
+end: 2025-12-12
+published: 2026-05-12
+sections:
+- name: Oral Presentations
+  title: Oral Presentations
+- name: Poster Presentations
+  title: Poster Presentations
+shortname: LoG
+start: &1 2025-12-10
+volume: '0'
+year: '2025'
+layout: proceedings
+series: Proceedings of Machine Learning Research
+publisher: PMLR
+issn: 2640-3498
+id: log25
+month: 0
+cycles: false
+bibtex_editor: Morris, Christopher and Vitercik, Ellen and Cucuringu, Mihai
+editor:
+- given: Christopher
+  family: Morris
+- given: Ellen
+  family: Vitercik
+- given: Mihai
+  family: Cucuringu
+title: Proceedings of Machine Learning Research
+description: |
+  Proceedings of the Fourth Learning on Graphs Conference
+  Held at Arizona State University, Glendale, Arizona, United States on 10-12 December 2025
+
+  Published as Volume 0 by the Proceedings of Machine Learning Research.
+
+  Volume Edited by:
+  Christopher Morris
+  Ellen Vitercik
+  Mihai Cucuringu
+
+  Series Editors:
+  Neil D. Lawrence
+date_str: 10--12 Dec
+url: https://proceedings.mlr.press
+author:
+  name: PMLR
+baseurl: "/v0"
+twitter_username: MLResearchPress
+github_username: mlresearch
+markdown: kramdown
+exclude:
+- README.md
+- Gemfile
+- ".gitignore"
+plugins:
+- jekyll-feed
+- jekyll-seo-tag
+- jekyll-remote-theme
+style: pmlr
+permalink: "/:title.html"
+ghub:
+  edit: true
+  repository: v0
+display:
+  copy_button:
+    bibtex: true
+    endnote: true
+    apa: true
+    comments: false
+volume_type: Volume
+volume_dir: v0
+email: ''
+conference:
+  name: Learning on Graphs Conference
+  url: https://logconference.org/
+  location: Arizona State University, Glendale, Arizona, United States
+  dates:
+  - *1
+  - 2025-12-11
+  - 2025-12-12
+analytics:
+  google:
+    tracking_id: UA-92432422-1
+link_visibility:
+  openreview: true
+  pdf: true
+  supplementary: true
+  software: true
+  video: true
+  arxiv: true
+  doi: true
+  website: true
+orig_bibfile: log25_clean.bib
+# Site settings
+# Original source: log2025.bib

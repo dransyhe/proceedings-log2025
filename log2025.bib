@@ -1,0 +1,325 @@
+@proceedings{log25,
+address = {Arizona State University, Glendale, Arizona, United States},
+booktitle = {Proceedings of the Fourth Learning on Graphs Conference},
+conference_number = {4},
+conference_url = {https://logconference.org/},
+editor = {Morris, Christopher and Vitercik, Ellen and Cucuringu, Mihai},
+end = {2025-12-12},
+name = {Learning on Graphs Conference},
+sections = {Oral Presentations|Poster Presentations},
+shortname = {LoG},
+start = {2025-12-10},
+volume = {0},
+year = {2025}
+}
+
+@inproceedings{arliss25a,
+abstract = {We propose a set of loss functions adapted from Stochastic Block Model (SBM) likelihood functions to train Graph Neural Networks (GNNs) for the task of unsupervised community detection. Identifying latent community structures is a prominent challenge for many graph applications. SBMs are classical models that describe the generating process of random graphs and are commonly used to infer community structure. The likelihood functions associated with SBMs are well-defined, differentiable, and measure the quality of inferred community partitions; this makes them particularly useful for unsupervised learning with GNNs. Our proposed loss functions are independent of any specific GNN architecture and demonstrate competitive or improved community detection performance against several alternatives. Evaluation is carried out on multiple architectures and datasets, offering a thorough empirical analysis of the state of community detection with GNNs.},
+author = {Arliss, William and Mueller, W. Graham},
+openreview = {T1vdfm1THf},
+pages = {1:1--1:21},
+section = {Oral Presentations},
+title = {Differentiable Community Detection with Graph Neural Networks and Stochastic Block Models}
+}
+
+@inproceedings{zhang25a,
+abstract = {Temporal graphs are widespread in real-world applications such as social networks, as well as trade and transportation networks. Predicting dynamic links within these evolving graphs is a key problem. Many memory-based methods use temporal interaction histories to generate node embeddings, which are then combined to predict links. However, these approaches primarily focus on individual node representations, often overlooking the inherently pairwise nature of link prediction. While some recent methods attempt to capture pairwise features, they tend to be limited by high computational complexity arising from repeated embedding calculations, making them unsuitable for large-scale datasets like the Temporal Graph Benchmark (TGB). To address the critical need for models that combine strong expressive power with high computational efficiency for link prediction on large temporal graphs, we propose Temporal Neural Common Neighbor (TNCN). Our model achieves this balance by adapting the powerful pairwise modeling principles of Neural Common Neighbor (NCN) to an efficient temporal architecture. TNCN improves upon NCN by efficiently preserving and updating temporal neighbor dictionaries for each node and by using multi-hop common neighbors to learn more expressive pairwise representations. TNCN achieves new state-of-the-art performance on Review from five large-scale real-world TGB datasets, 6 out of 7 datasets in the transductive setting and 3 out of 7 in the inductive setting on small- to medium-scale datasets. Additionally, TNCN demonstrates excellent scalability, outperforming prominent GNN baselines by up to 30.3 times in speed on large datasets. Our code is available at \href{https://github.com/GraphPKU/TNCN}{https://github.com/GraphPKU/TNCN}.},
+author = {Zhang, Xiaohui and Wang, Yanbo and Wang, Xiyuan and Zhang, Muhan},
+openreview = {ffsDVGiKRm},
+pages = {2:1--2:25},
+section = {Oral Presentations},
+title = {Efficient Neural Common Neighbor for Temporal Graph Link Prediction}
+}
+
+@inproceedings{putterman25a,
+abstract = {Low-rank adaptations (LoRAs) have revolutionized the finetuning of large foundation models, enabling efficient adaptation even with limited computational resources. The resulting proliferation of LoRAs together with the recent advances of weight-space learning present exciting opportunities for applying machine learning techniques that take these low-rank weights themselves as inputs. In this paper, we investigate the potential of Learning on LoRAs (LoL), a setup where machine learning models learn and make predictions on datasets of LoRA weights. Motivated by previous weight-space learning works, we first identify the inherent parameter symmetries of our data -- low-rank decompositions of weights -- which differ significantly from the parameter symmetries of standard neural networks. To efficiently process LoRA weights, we develop several symmetry-aware invariant or equivariant LoL models. In diverse experiments, we show that our LoL architectures can process LoRA weights to predict CLIP scores, finetuning data attributes, finetuning data membership, and accuracy on downstream tasks. We also show that LoL models trained on LoRAs of one pretrained model can effectively generalize to LoRAs trained on other models from the same model family. As an example of the utility of LoL, our LoL models can accurately estimate CLIP scores of diffusion models and ARC-C test accuracy of LLMs over 50,000 times faster than standard evaluation. As part of this work, we finetuned and will release datasets of more than ten thousand text-to-image diffusion-model and language-model LoRAs.},
+author = {Putterman, Theo and Lim, Derek and Gelberg, Yoav and Bronstein, Michael M. and Jegelka, Stefanie and Maron, Haggai},
+openreview = {fHRRYBZAmS},
+pages = {3:1--3:28},
+section = {Oral Presentations},
+software = {https://anonymous.4open.science/r/LoL-925B/},
+title = {GL Equivariant Metanetworks for Learning on Low Rank Weight Spaces}
+}
+
+@inproceedings{shi25a,
+abstract = {Graph learning, or network inference, is a prominent problem in graph signal processing (GSP). GSP generalizes the Fourier transform to non-Euclidean domains, and graph learning is pivotal to applying GSP when these domains are not known. With the recent prevalence of multi-way data, there has been growing interest in product graphs that naturally factorize dependencies across different ways. However, the types of graph products that can be learned are still limited for modeling diverse dependency structures. In this paper, we study the problem of learning a Kronecker-structured product graph from smooth signals. Unlike the more commonly used Cartesian product, the Kronecker product models dependencies in a more intricate, non-separable way, but posits harder constraints on the graph learning problem. To tackle this non-convex problem, we propose an alternating scheme to optimize each factor graph in turn and provide theoretical guarantees for its asymptotic convergence. We also modify the proposed algorithm to learn graphs of the strong product, a denser graph product that covers the Kronecker product. We conduct experiments on synthetic and real-world graphs and demonstrate our approach's efficacy and superior performance compared to existing methods.},
+author = {Shi, Changhao and Mishne, Gal},
+openreview = {kuDtgSMEFn},
+pages = {4:1--4:23},
+section = {Oral Presentations},
+title = {Learning Kronecker-Structured Graphs from Smooth Signals}
+}
+
+@inproceedings{wang25a,
+abstract = {Graph Neural Networks (GNNs), despite success in node classification, struggle with class-imbalanced graphs, leading to minority node misclassification. Existing methods that synthesize minority nodes often overlook how majority nodes propagate misleading information through majority-minority edges; our analysis confirms this negative impact. To address this, we propose BufferGraph, a framework that inserts buffer nodes on such edges. These nodes act as controlled bottlenecks to reduce excessive majority node influence. And we theoretically demonstrate they reduce minority node feature distortion. Experiments on five real-world datasets show BufferGraph improves accuracy by up to 2\% over state-of-the-art methods, excelling in imbalanced settings and for minority classes with high heterophily. Code is available at \url{https://github.com/Persdre/BufferGraph}.},
+author = {Wang, Qian and Liu, Zemin and Zhang, Zhen and Luo, Bingqiao and He, Bingsheng},
+openreview = {6ikB5L1kzq},
+pages = {5:1--5:17},
+section = {Oral Presentations},
+title = {Less is More: Using Buffer Nodes to Reduce Excessive Majority Node Influence in Class Imbalance Graphs}
+}
+
+@inproceedings{olejniczak25a,
+abstract = {Motivated by the incompleteness of modern knowledge graphs, a new setup for query answering has emerged, where the goal is to predict answers that do not necessarily appear in the knowledge graph, but are present in its *completion*. In this paper, we formally introduce and study two query answering problems, namely, *query answer classification* and *query answer retrieval*. To solve these problems, we propose ANYCQ, a model that can classify answers to *any* conjunctive query on *any* knowledge graph. At the core of our framework lies a graph neural network trained using a reinforcement learning objective to answer Boolean queries. Trained only on simple, small instances, ANYCQ generalizes to *large queries* of *arbitrary* structure, reliably classifying and retrieving answers to queries that existing approaches fail to handle. This is empirically validated through our newly proposed, challenging benchmarks. Finally, we empirically show that ANYCQ can effectively transfer to *completely novel* knowledge graphs when equipped with an appropriate link prediction model, highlighting its potential for querying incomplete data.},
+author = {Olejniczak, Krzysztof and Huang, Xingyue and Galkin, Mikhail and Ceylan, Ismail Ilkan},
+openreview = {Fo2GLDelI1},
+pages = {6:1--6:30},
+section = {Oral Presentations},
+software = {https://github.com/kolejnyy/ANYCQ/},
+title = {One Model, Any Conjunctive Query: Graph Neural Networks for Answering Queries over Incomplete Knowledge Graphs}
+}
+
+@inproceedings{he25a,
+abstract = {In the era of foundation models and Large Language Models (LLMs), Euclidean space has been the de facto geometric setting for machine learning architectures. However, recent literature has demonstrated that this choice comes with fundamental limitations. At a large scale, real-world data often exhibits inherently non-Euclidean structures, such as multi-way relationships, hierarchies, symmetries, and non-isotropic scaling, in a variety of domains, such as languages, vision, and the natural sciences. It is challenging to effectively capture these structures within the constraints of Euclidean spaces. This position paper argues that moving beyond Euclidean geometry is not merely an optional enhancement but a necessity to maintain the scaling law for the next-generation of foundation models. By adopting these geometries, foundation models could more efficiently leverage the aforementioned structures. Task-aware adaptability that dynamically reconfigures embeddings to match the geometry of downstream applications could further enhance efficiency and expressivity. Our position is supported by a series of theoretical and empirical investigations of prevalent foundation models. Finally, we outline a roadmap for integrating non-Euclidean geometries into foundation models, including strategies for building geometric foundation models via fine-tuning, training from scratch, and hybrid approaches.},
+author = {He, Neil and Liu, Jiahong and Zhang, Buze and Bui, Ngoc and Maatouk, Ali and King, Irwin and Yang, Menglin and Weber, Melanie and Ying, Rex},
+openreview = {WoK4o90lln},
+pages = {7:1--7:27},
+section = {Oral Presentations},
+title = {Position: Beyond Euclidean – Foundation Models Should Embrace Non-Euclidean Geometries}
+}
+
+@inproceedings{mishayev25a,
+abstract = {Message Passing Neural Networks (MPNNs) are widely used for learning on graphs, but their ability to process long-range information is limited by the phenomenon of _oversquashing_. This limitation has led some researchers to advocate Graph Transformers as a better alternative, whereas others suggest that it can be mitigated within the MPNN framework, using virtual nodes or other rewiring techniques. In this work, we demonstrate that oversquashing is not limited to long-range tasks, but can also arise in short-range problems. This observation allows us to disentangle two distinct mechanisms underlying oversquashing: (1) the _bottleneck phenomenon_, which can arise even in low-range settings, and (2) the _vanishing gradient phenomenon_, which is closely associated with long-range tasks. We further show that the short-range bottleneck effect is not captured by existing explanations for oversquashing, and that adding virtual nodes does not resolve it. In contrast, transformers do succeed in such tasks, positioning them as the more compelling solution to oversquashing, compared to specialized MPNNs.},
+author = {Mishayev, Yaaqov and Sverdlov, Yonatan and Amir, Tal and Dym, Nadav},
+openreview = {rmX8Jamnyg},
+pages = {8:1--8:14},
+section = {Oral Presentations},
+software = {https://github.com/YakovM93/Short-Range-Oversquashing/tree/main},
+title = {Short-Range Oversquashing}
+}
+
+@inproceedings{ennadir25a,
+abstract = {Learning representations of temporally evolving graphs, also known as Continuous-Time Dynamic Graphs (CTDGs), has gained considerable attention due to their ability to model a wide range of real-world phenomena. Recent efforts extend the well-established message-passing paradigm and Graph Neural Network (GNN) models, originally designed for static graphs, to account for the temporal dimension of dynamic graphs. Although these methods have shown promising results, they often inherit limitations from their static counterparts, particularly regarding the capture of long-range interactions. In static settings, adding Virtual Nodes (VNs) has proven effective in overcoming locality constraints and boosting performance. In this work, we conduct a theoretical analysis of the impact of VNs in CTDG-based models. Specifically, we introduce the concept of information flow, which examines how information propagates through a graph following an event. From this perspective, we highlight inherent limitations of existing CTDG-based approaches and demonstrate how adding VNs can address these constraints. Building on these insights, we propose *k*-TVNs, a framework that incorporates a set of fully connected VNs, each representing a distinct community within the graph. Through both theoretical investigation and empirical validation, we show that incorporating VNs substantially improves the performance of CTDG models.},
+author = {ENNADIR, Sofiane and Jedra, Yassir and Smirnov, Oleg and Cao, Lele},
+openreview = {jdKtkiH9ze},
+pages = {9:1--9:23},
+section = {Oral Presentations},
+title = {Virtual Nodes Go Temporal}
+}
+
+@inproceedings{li25a,
+abstract = {Two-dimensional (2D) Nuclear Magnetic Resonance (NMR) spectroscopy, particularly Heteronuclear Single Quantum Coherence (HSQC) spectroscopy, plays a critical role in elucidating molecular structures, interactions, and electronic properties. However, accurately interpreting 2D NMR data remains labor-intensive and error-prone, requiring highly trained domain experts, especially for complex molecules. Machine Learning (ML) holds significant potential in 2D NMR analysis by learning molecular representations and recognizing complex patterns from data. However, progress has been limited by the lack of large-scale and high-quality annotated datasets. In this work, we introduce , the first annotated experimental dataset designed for ML-based molecular representation learning in 2D NMR. It includes over 22,000 HSQC spectra, along with the corresponding molecular graphs and SMILES strings. Uniquely, 2DNMRGym adopts a surrogate supervision setup: models are trained using algorithm-generated annotations derived from a previously validated method and evaluated on a held-out set of human-annotated gold-standard labels. This enables rigorous assessment of a model’s ability to generalize from imperfect supervision to expert-level interpretation. We provide benchmark results using a series of 2D and 3D GNN and GNN transformer models, establishing a strong foundation for future work. 2DNMRGym supports scalable model training and introduces a chemically meaningful benchmark for evaluating atom-level molecular representations in NMR-guided structural tasks. Our data and code is open-source and available at: https://github.com/siriusxiao62/2DNMRGym.},
+author = {Li, Yunrui and Xu, Hao and Hong, Pengyu},
+openreview = {f7vH3rUt17},
+pages = {10:1--10:18},
+section = {Poster Presentations},
+software = {https://github.com/siriusxiao62/2DNMRGym},
+title = {2DNMRGym: An Annotated Experimental Dataset for Atom-Level Molecular Representation Learning in 2D NMR via Surrogate Supervision}
+}
+
+@inproceedings{tyler25a,
+abstract = {We revisit the theoretical performances of Spectral Clustering, a classical algorithm for graph partitioning that relies on the eigenvectors of a matrix representation of the graph. Informally, we show Spectral Clustering works well as long as the smallest eigenvalues appear in groups well separated from the rest of the matrix representation's spectrum. This arises, for example, whenever there exists a hierarchy of clusters at different scales, a regime not captured by previous analyses. Our results are very general and can be applied beyond the traditional graph Laplacian. In particular, we study Hermitian representations of digraphs and show Spectral Clustering can recover partitions where edges between clusters are oriented mostly in the same direction. This has applications in, for example, the analysis of trophic levels in ecological networks. We demonstrate that our results accurately predict the performances of Spectral Clustering on synthetic and real-world data sets.},
+author = {Tyler, George and Zanetti, Luca},
+openreview = {KTVWD9lMhM},
+pages = {11:1--11:23},
+section = {Poster Presentations},
+software = {https://github.com/GeorgeRLTyler/Improved-and-Generalised-Analysis-for-Spectral-Clustering},
+title = {An Improved and Generalised Analysis for Spectral Clustering}
+}
+
+@inproceedings{fu25a,
+abstract = {Graphs, as a relational data structure, have been widely used in various application scenarios, such as molecule design and recommender systems. Recently, large language models (LLMs) are reorganizing in the AI community due to their strong reasoning and inference capabilities. Enabling LLMs to effectively process graph-structured data holds significant potential. Applications include: (1) distilling external knowledge bases to mitigate hallucination and overcome the context window limitation in retrieval-augmented generation; and (2) directly addressing graph-centric tasks such as protein design and drug discovery. However, feeding raw graph data into LLMs is impractical. Graphs often have complex topologies, large scale, and lack efficient semantic representations, all of which hinder their direct integration with LLMs. This raises a key question: can graph representations be expressed in natural language while still encoding rich structural and geometric information suitable for LLM input? One promising direction is the use of **graph parametric representation** or **graph law**. These approaches predefine a set of parameters (e.g., degree, diameter, temporal dynamics) and establish their values and relationships by analyzing distributions across real-world graphs. Such parametric representations may offer a natural bridge for LLMs to understand complex graph structures and perform corresponding inferences. Therefore, in this survey, we first review four categorical of current efforts of incorporating graph data into LLMs, i.e., topological query, semantic query, GNN embedding, and GNN prediction, highlighting their limitations. Then, we introduce graph parametric representation from multiple perspectives, including macroscopic vs. microscopic views, low-order vs. high-order structures, and static vs. temporal graphs. Finally, we conclude the paper with future research directions.},
+author = {Fu, Dongqi and Fang, Liri and Li, Zihao and Xu, Zhe and Tong, Hanghang and Torvik, Vetle I and He, Jingrui},
+openreview = {AZmt7LlBmI},
+pages = {12:1--12:15},
+section = {Poster Presentations},
+title = {Bring Complex Geometric Information to LLMs: A Positional Survey of Graph Parametric Representation}
+}
+
+@inproceedings{amado25a,
+abstract = {Graph Neural Networks (GNNs) have achieved remarkable success across diverse applications, yet they remain limited by oversmoothing and poor performance on heterophilic graphs. To address these challenges, we introduce a novel framework that equips graphs with a complex-weighted structure, assigning each edge a complex number to drive a diffusion process that extends random walks into the complex domain. We prove that this diffusion is highly expressive: with appropriately chosen complex weights, any node-classification task can be solved in the steady state of a complex random walk. Building on this insight, we propose the Complex-Weighted Convolutional Network (CWCN), which learns suitable complex-weighted structures directly from data while enriching diffusion with learnable matrices and nonlinear activations. CWCN is simple to implement, requires no additional hyperparameters beyond those of standard GNNs, and achieves competitive performance on benchmark datasets. Our results demonstrate that complex-weighted diffusion provides a principled and general mechanism for enhancing GNN expressiveness, opening new avenues for models that are both theoretically grounded and practically effective.},
+author = {Amado, Cristina López and Schwarz, Tassilo and Tian, Yu and Lambiotte, Renaud},
+openreview = {EgRvGMd2Zp},
+pages = {13:1--13:19},
+section = {Poster Presentations},
+software = {https://github.com/clopezamado/complex-weighted-convolutional-networks.git},
+title = {Complex-Weighted Convolutional Networks: Provable Expressiveness via Complex Diffusion}
+}
+
+@inproceedings{sun25a,
+abstract = {Designing drug molecules that bind effectively to target proteins while maintaining desired pharmacological properties remains a fundamental challenge in drug discovery. Current approaches struggle to simultaneously control molecular topology and 3D geometry, often requiring expensive retraining for new design objectives. We propose a multi-modal variational flow framework that addresses these limitations by integrating a 2D topology encoder with a 3D geometry generator. Our architecture encodes molecular graphs into a learned latent distribution via junction tree representations, then employs normalizing flows to autoregressively generate atoms in 3D space conditioned on the protein binding site. This design enables zero-shot controllability: by manipulating the latent prior distribution, we can generate molecules with specific substructures or optimized properties without model retraining. Experiments on the CrossDocked benchmark show that our model achieves 31.1% high-affinity rate, substantially outperforming existing methods, while maintaining superior drug-likeness and structural diversity. Our framework opens new possibilities for on-demand molecular design, allowing medicinal chemists to rapidly explore chemical space with precise control over both structural motifs and physicochemical properties.},
+author = {Sun, Fang and Zhan, Zhihao and Guo, Hongyu and Zhang, Ming and Tang, Jian and Sun, Yizhou},
+openreview = {qsAy8vSuW7},
+pages = {14:1--14:20},
+section = {Poster Presentations},
+title = {Controllable Generation of Drug-like Molecules with Multi-modal Variational Flow}
+}
+
+@inproceedings{alipourpijani25a,
+abstract = {Dynamic graphs whose topology and nodes evolve over time are ubiquitous in multiple real world domains such as social networks, finance, and healthcare. Traditional graph learning methods fail to capture structural changes and temporal patterns in dynamic graphs. Recent advances in dynamic graph representation learning, such as meta-learning-based approaches, have addressed some of these challenges. However, existing methods still face three key limitations. First, most approaches capture either local or global structures of the graphs, neglecting to model both simultaneously. Second, meta-learning models often depend on user-specific window size, which must be carefully tuned for each dataset. A short window size may miss trends, and a long window size may blur recent updates. Third, most methods work on only discrete-time or continuous-time dynamic graphs, resulting in suboptimal performance across different temporal settings. To address these limitations in dynamic graph representation learning, we propose a novel method called DyGSSM (Multi-view Dynamic Graph Embeddings with SSM Gradient Update). We extract local and global features at each snapshot and fuse them using a lightweight attention mechanism for link prediction. To capture long-term dependencies when updating model parameters, we incorporate HiPPO (High-order Polynomial Projection Operators) algorithm, which has gained attention for its ability to efficiently optimize and preserve sequence history in State Space Models (SSMs). DyGSSM is designed to handle both discrete-time and continuous-time dynamic graphs. Parameter comparisons show that DyGSSM requires substantially fewer parameters than the other methods. Extensive experiments on 12 public datasets demonstrate that DyGSSM outperforms baselines and State-Of-The-Art (SOTA) methods in 32 out of 36 evaluation metrics. The source code and datasets are available at https://github.com/bozdaglab/DyGSSM.},
+author = {Alipourpijani, Bizhan and Bozdag, Serdar},
+openreview = {uRLMoB6Ijx},
+pages = {15:1--15:20},
+section = {Poster Presentations},
+title = {DyGSSM: Multi-view Dynamic Graph Embeddings with SSM Gradient Update}
+}
+
+@inproceedings{zheng25a,
+abstract = {The message passing framework has largely driven the success of GNNs, yet it faces potential limitations: over-squashing, over-smoothing and expressiveness constraints. A promising solution is structure-guided message passing, which leverages the graph structure to guide information flow and better capture long-range dependencies. We present EC-Gate, a lightweight plug-in that leverages Expansion Contribution (EC)—a layer-wise measure of how edges expand the receptive field—to drive group-wise gates that regulate message propagation. By concentrating capacity on structurally critical edges, EC-Gate can improve the sensitivity bound in large hidden dimensions, while limiting overfitting. EC-Gate delivers significant improvements across synthetic and molecular benchmarks. Remarkably, when implemented on a standard GCN backbone, it achieves state-of-the-art performance on PCBA and competitive results on Lipo and AqSol, showing that EC serves as a strong structural prior. Furthermore, the empirical analysis of gate activations reveals how EC-Gate modulates message passing in an anisotropic manner.},
+author = {Zheng, Yutong and Zhao, Xiangyu and Mandic, Danilo},
+openreview = {PazZzZ0fgA},
+pages = {16:1--16:15},
+section = {Poster Presentations},
+title = {EC-Gate: Expansion Contribution-Aware Gating for Structure-Guided Message Passing in GNNs}
+}
+
+@inproceedings{zhang25b,
+abstract = {Agentic workflows invoked by Large Language Models (LLMs) have achieved remarkable success in handling complex tasks. However, optimizing such workflows is costly and inefficient due to extensive invocations of LLMs. To fill this gap, this paper formulates agentic workflows as computational graphs and proposes **FLORA** (work**FLO**w g**RA**ph neural networks), which are variants of Graph Neural Networks (GNNs), as efficient predictors of agentic workflow performances, thus avoiding repeated LLM invocations for evaluation. To empirically ground the effectiveness and efficiency of FLORA, we construct **FLORA-Bench**, a unified platform for training and benchmarking predictors of agentic workflow performances. With extensive experiments, we arrive at the following conclusions: (1) FLORA is a simple yet effective method to accurately predict agentic workflow performances, and (2) it demonstrates significant practical benefits, achieving up to a 125× speedup with minimal performance loss. These conclusions support new applications of GNNs and a novel direction towards automating agentic workflow optimization. All codes, models, and data will be public.},
+author = {Zhang, Yuanshuo and Hou, Yuchen and Tang, Bohan and Chen, Shuo and Zhang, Muhan and Dong, Xiaowen and Chen, Siheng},
+openreview = {RmlDI5kUxa},
+pages = {17:1--17:19},
+section = {Poster Presentations},
+title = {FLORA: GNNs as Predictors of Agentic Workflow Performances}
+}
+
+@inproceedings{blocker25a,
+abstract = {Networks model how the entities in complex systems are connected and can be partitioned into communities in different ways. Common approaches for comparing network partitions compute agreements between partitions in terms of set overlaps, however, they ignore link patterns, which are essential for the organisation of networks. We propose \emph{flow divergence}, an information-theoretic divergence measure for comparing network partitions, inspired by the ideas behind the Kullback-Leibler (KL) divergence and describing random walks on networks. Like the KL divergence, flow divergence adopts a coding perspective and compares two network partitions $\mathsf{A}$ and $\mathsf{B}$ by considering the expected extra number of bits required to describe a random walk on a network using "estimate" $\mathsf{B}$ of the network's assumed "true" partition $\mathsf{A}$. Because flow divergence is based on random walks, it can compare hierarchical and non-hierarchical partitions with arbitrary depths. Applied to synthetic and empirical networks, we show that flow divergence distinguishes partitions where traditional measures fail.},
+author = {Blöcker, Christopher and Scholtes, Ingo},
+openreview = {B5ksarDPdh},
+pages = {18:1--18:37},
+section = {Poster Presentations},
+software = {https://github.com/mapequation/map-equation-similarity},
+title = {Flow Divergence: Comparing Hierarchical Network Partitions based on Relative Entropy}
+}
+
+@inproceedings{sverdlov25a,
+abstract = {Famously, the ability of Message Passing Neural Networks (MPNN) to distinguish between graphs is limited to graphs separable by the Weisfeiler-Lemann (WL) graph isomorphism test, and the strongest MPNNs, in terms of separation power, are WL-equivalent. However, it was demonstrated that the quality of separation provided by standard WL-equivalent MPNN can be very low, resulting in WL-separable graphs being mapped to very similar, hardly distinguishable outputs. This phenomenon can be explained by the recent observation that standard MPNNs are not lower-Lipschitz. This paper addresses this issue by introducing FSW-GNN, the first MPNN that is fully bi-Lipschitz with respect to standard WL-equivalent graph metrics. Empirically, we show that our MPNN is competitive with standard MPNNs for several graph learning tasks and is far more accurate in long-range tasks, due to its ability to avoid oversmoothing and oversquashing. Our code is available at https://github.com/yonatansverdlov/Over-squashing.},
+author = {Sverdlov, Yonatan and Davidson, Yair and Dym, Nadav and Amir, Tal},
+openreview = {zVXZK5JRHB},
+pages = {19:1--19:24},
+section = {Poster Presentations},
+title = {FSW-GNN: A Bi-Lipschitz WL-Equivalent Graph Neural Network}
+}
+
+@inproceedings{sharma25a,
+abstract = {Traditional loss functions, including cross-entropy, contrastive, triplet, and supervised contrastive losses, used for fine-tuning pre-trained language models such as BERT, operate only within local neighborhoods and fail to account for the global semantic structure. We present G-Loss, a graph-guided loss function that incorporates semi-supervised label propagation to use structural relationships within the embedding manifold. G-Loss builds a document-similarity graph that captures global semantic relationships, thereby guiding the model to learn more discriminative and robust embeddings. We evaluate G-Loss on five benchmark datasets covering key downstream classification tasks: MR (sentiment analysis), R8 and R52 (topic categorization), Ohsumed (medical document classification), and 20NG (news categorization). In the majority of experimental setups, G-Loss converges faster and produces semantically coherent embedding spaces, resulting in higher classification accuracy than models fine-tuned with traditional loss functions.},
+author = {Sharma, Aditya and AGARWAL, VINTI and Kumar, Rajesh},
+openreview = {8DIZVVKSra},
+pages = {20:1--20:20},
+section = {Poster Presentations},
+software = {https://github.com/saditya13/G-Loss-LoG},
+title = {G-Loss: Graph-Guided Fine-Tuning of Language Models}
+}
+
+@inproceedings{fathony25a,
+abstract = {User event modeling plays a central role in many machine learning applications, with use cases spanning e-commerce, social media, finance, cybersecurity, and other domains. User events can be broadly categorized into personal events, which involve individual actions, and relational events, which involve interactions between two users. These two types of events are typically modeled separately, using sequence-based methods for personal events and graph-based methods for relational events. Despite the need to capture both event types in real-world systems, prior work has rarely considered them together. This is often due to the convenient simplification that user behavior can be adequately represented by a single formalization, either as a sequence or a graph. To address this gap, there is a need for public datasets and prediction tasks that explicitly incorporate both personal and relational events. In this work, we introduce a collection of such datasets, propose a unified formalization, and empirically show that models benefit from incorporating both event types. Our results also indicate that current methods leave a notable room for improvements. We release these resources to support further research in unified user event modeling and encourage progress in this direction.},
+author = {Fathony, Rizal and Melnyk, Igor and Reinert, Owen and Nguyen, Nam H and Rosa, Daniele and Bruss, C. Bayan},
+openreview = {O4eCrIFmwa},
+pages = {21:1--21:27},
+section = {Poster Presentations},
+software = {https://github.com/CapitalOne-Research/personal-relational-event-sequence},
+title = {Integrating Sequential and Relational Modeling for User Events: Datasets and Prediction Tasks}
+}
+
+@inproceedings{lachi25a,
+abstract = {In domains such as healthcare, finance, and e-commerce, the temporal dynamics of relational data emerge from complex interactions—such as those between patients and providers, or users and products across diverse categories. To be broadly useful, models operating on these data must integrate long-range spatial and temporal dependencies across diverse types of entities, while also supporting multiple predictive tasks. However, existing graph models for relational data primarily focus on spatial structure, treating temporal information merely as a filtering constraint to exclude future events rather than a modeling signal, and are typically designed for single-task prediction. To address these gaps, we introduce a temporal subgraph sampler that enhances global context by retrieving nodes beyond the immediate neighborhood to capture temporally relevant relationships. In addition, we propose the **Relational Graph Perceiver (RGP)**, a graph transformer architecture for relational deep learning that leverages a cross-attention-based latent bottleneck to efficiently integrate information from both structural and temporal contexts. This latent bottleneck integrates signals from different node and edge types into a common latent space, enabling the model to build global context across the entire relational system. RGP also incorporates a flexible cross-attention decoder that supports joint learning across tasks with disjoint label spaces within a single model. Experiments on RelBench, SALT, and CTU show that RGP delivers state-of-the-art performance, offering a general and scalable solution for relational deep learning with support for diverse predictive tasks.predictive tasks.},
+author = {Lachi, Divyansha and Mohammadi, Mahmoud and Meyer, Joe and Arora, Vinam and Palczewski, Tom and Dyer, Eva L},
+openreview = {fcVIJ2WSIX},
+pages = {22:1--22:16},
+section = {Poster Presentations},
+title = {Integrating Temporal and Structural Context in Graph Transformers for Relational Deep Learning}
+}
+
+@inproceedings{midlagajni25a,
+abstract = {Simulating particle dynamics with high fidelity is crucial for solving real-world interaction and control tasks involving liquids in design, graphics, and robotics. Recently, data-driven approaches, particularly those based on graph neural networks (GNNs), have shown progress in tackling such problems. However, these approaches are often limited to learning fluid behavior in static free-fall environments or simple manipulation settings involving primitive objects, often overlooking complex interactions with dynamically moving kinematic rigid bodies. Here, we propose a GNN-based framework designed from the ground up to learn the dynamics of liquids under rigid body interactions and active manipulations, where particles are represented as graph nodes and particle-object collisions are handled using surface representations with the bounding volume hierarchy (BVH) algorithm. Our approach accurately captures fluid behavior in dynamic settings and can also function as a simulator in static free-fall environments. Despite being trained on single-object manipulation tasks, our model generalizes effectively to environments with novel objects and novel manipulation tasks. Finally, we show that the learned dynamics can be leveraged to solve control and manipulation tasks using gradient-based optimization methods.},
+author = {Midlagajni, Niteesh and Rothkopf, Constantin A.},
+openreview = {vGjFGfHR42},
+pages = {23:1--23:17},
+section = {Poster Presentations},
+title = {Learning Particle Dynamics Subject to Rigid Body Manipulations Using Graph Neural Networks}
+}
+
+@inproceedings{qarkaxhija25a,
+abstract = {In this work, we explore the use of untrained message passing layers in graph neural networks for link prediction. The untrained message passing layers we consider are derived from widely used graph neural network architectures by removing trainable parameters and nonlinearities in their respective message passing layers. Experimentally, we find that untrained message passing layers can lead to competitive and even superior link prediction performance compared to fully trained message passing layers while being more efficient, especially in the presence of high-dimensional features. We also provide a theoretical analysis of untrained message passing layers in the context of link prediction and show that the inner product of features produced by untrained message passing layers relate to common neighbour and path-based topological measures which are widely used for link prediction. As such, untrained message passing layers offer a more efficient alternative to trained message passing layers in link prediction tasks, with clearer theoretical links to classical path-based heuristics.},
+author = {Qarkaxhija, Lisi and Wegner, Anatol E. and Scholtes, Ingo},
+openreview = {2M6MJf4CTL},
+pages = {24:1--24:19},
+section = {Poster Presentations},
+software = {https://doi.org/10.5281/zenodo.15019863},
+title = {Link Prediction with Untrained Message Passing Layers}
+}
+
+@inproceedings{navuluru25a,
+abstract = {Deep graph learning has achieved remarkable success, but its reliance on abundant labeled data limits use in many scientific domains, where each label may require costly experiments or simulations. We revisit graph classification in the low-shot regime and ask whether explicit, theory-grounded descriptors can provide a reliable foundation and how they can be combined with modern architectures. We study two families of label-free embeddings: *topological vectors* from persistent homology that capture multiscale connectivity, and *spectral vectors* from the Laplacian density of states that summarize diffusion geometry. To harness their complementary strengths, we introduce *prototype embeddings*, which project graphs onto class-level prototypes in the joint topological–spectral space, and *STAMP*, a lightweight controller that conditions GNN and GT backbones on these descriptors through layer-wise modulation. Across ten TU benchmarks and label budgets $K \in$ {1,5,10,25,50}, prototype embeddings with simple classifiers consistently outperform strong baselines in the extreme low-label setting, while *STAMP* achieves the best overall rank and smallest accuracy gap once $K \ge 10$. Our results demonstrate that explicit structural priors offer a powerful and complementary route to label-efficient graph learning, closing much of the gap to larger deep models without pretraining.},
+author = {Navuluru, Sai Karthik and Kumar, Surbhi and Coskunuzer, Baris},
+openreview = {XpoqfBlWGK},
+pages = {25:1--25:17},
+section = {Poster Presentations},
+software = {https://github.com/1999-karthik/STAMP},
+title = {Low-Shot Graph Learning with Topological and Spectral Embeddings}
+}
+
+@inproceedings{elhag25a,
+abstract = {Incorporating equivariance as an inductive bias into deep learning architectures to take advantage of the data symmetry has been successful in multiple applications, such as chemistry and dynamical systems. In particular, roto-translations are crucial for effectively modeling geometric graphs and molecules, where understanding the 3D structures enhances generalization. However, strictly equivariant models often pose challenges due to their higher computational complexity. In this paper, we introduce REMUL, a training procedure that learns \emph{approximate} equivariance for unconstrained networks via multitask learning. By formulating equivariance as a tunable objective alongside the primary task loss, REMUL offers a principled way to control the degree of approximate symmetry, relaxing the rigid constraints of traditional equivariant architectures. We show that unconstrained models (which do not build equivariance into the architecture) can learn approximate symmetries by minimizing an additional simple equivariance loss. This enables quantitative control over the trade-off between enforcing equivariance constraints and optimizing for task-specific performance. Our method achieves competitive performance compared to equivariant baselines while being significantly faster (up to 10$\times$ at inference and 2.5$\times$ at training), offering a practical and adaptable approach to leveraging symmetry in unconstrained architectures.},
+author = {Elhag, Ahmed A. A. and Rusch, T. Konstantin and Giovanni, Francesco Di and Bronstein, Michael M.},
+openreview = {xrzYdsIv3f},
+pages = {26:1--26:29},
+section = {Poster Presentations},
+title = {Relaxed Equivariance via Multitask Learning}
+}
+
+@inproceedings{gardaa25a,
+abstract = {Contours or closed planar curves are common in many domains. For example, they appear as object boundaries in computer vision, isolines in meteorology, and the orbits of rotating machinery. In many cases when learning from contour data, planar rotations of the input will result in correspondingly rotated outputs. It is therefore desirable that deep learning models be rotationally equivariant. In addition, contours are typically represented as an ordered sequence of edge points, where the choice of starting point is arbitrary. It is therefore also desirable for deep learning methods to be equivariant under cyclic shifts. We present RotaTouille, a deep learning framework for learning from contour data that achieves both rotation and cyclic shift equivariance through complex-valued circular convolution. We further introduce and characterize equivariant non-linearities, coarsening layers, and global pooling layers to obtain invariant representations for downstream tasks. Finally, we demonstrate the effectiveness of RotaTouille through experiments in shape classification, reconstruction, and contour regression.},
+author = {Gardaa, Odin Hoff and Blaser, Nello},
+openreview = {VbCLyz3uW7},
+pages = {27:1--27:19},
+section = {Poster Presentations},
+software = {https://github.com/odinhg/rotation-equivariant-contour-learning},
+title = {RotaTouille: Rotation Equivariant Deep Learning for Contours}
+}
+
+@inproceedings{munir25a,
+abstract = {Vision Graph Neural Networks (ViGs) are often limited by their reliance on a fixed, homogeneous graph construction rule applied across all network stages. To address this limitation, we introduce SearchViG, a novel framework that automatically designs optimal heterogeneous architectures by performing a Graph Construction Search (GCS) to produce the optimal graph topology for each stage within our designated search space. Our search is guided by a zero-shot, theoretically-grounded proxy: the spectral gap of the graph's adjacency matrix, which quantifies its Ramanujan-like expansion properties, provably linking it to superior information flow. SearchViG discovers new heterogeneous architectures that assign different graph topologies, number of neighbors, and hops between neighbors based on feature resolution. Our resulting models establish a new state-of-the-art Pareto frontier for Vision GNNs. For instance, our SearchViG-M achieves 83.3\% top-1 accuracy, outperforming both Vision GNN-B (ViG-B) and Vision Hypergraph Neural Network-B (ViHGNN-B) while using over 70\% fewer parameters and 80\% fewer GMACs. This efficiency extends to downstream tasks, where our lightweight SearchViG-S obtains 43.4 mIoU, 43.5 $AP^{box}$, and 39.9 $AP^{mask}$, surpassing the much larger Pyramid Vision Transformer-Large (PVT-Large) across all metrics while using 80\% fewer parameters. Code is available at https://github.com/SLDGroup/SearchViG.},
+author = {Munir, Mustafa and Rahman, Md Mostafijur and Wei, Xiwen and Yang, Yuedong and Marculescu, Radu},
+openreview = {cmEzgaYIJC},
+pages = {28:1--28:28},
+section = {Poster Presentations},
+software = {https://github.com/SLDGroup/SearchViG},
+title = {SearchViG: Optimal Vision GNNs via Ramanujan Spectral Optimization}
+}
+
+@inproceedings{ma25a,
+abstract = {Large Language Models (LLMs) have achieved remarkable success but remain data-inefficient, especially when learning from small, specialized corpora with limited and proprietary data. Existing synthetic data generation methods for continue pre-training focus on intra-document content and overlook cross-document knowledge associations, limiting content diversity and depth. We propose Synthetic-on-Graph (SoG), a synthetic data generation framework that incorporates cross-document knowledge associations for efficient corpus expansion. SoG constructs a context graph by extracting entities and concepts from the original corpus, representing cross-document associations, and employing a graph walk strategy for knowledge-associated sampling. This enhances synthetic data diversity and coherence, enabling models to learn complex knowledge structures and handle rare knowledge. To further improve the quality of synthetic data, we integrate two complementary strategies, Chain-of-Thought (CoT) and Contrastive Clarifying (CC), to enhance both reasoning capability and discriminative power. Extensive experiments demonstrate that SoG surpasses state-of-the-art (SOTA) methods on multi-hop and domain-specific question answering, while achieving competitive performance on long-context reading comprehension. These results highlight the superior generalization ability of SoG. Our work advances the paradigm of synthetic data generation and offers practical solutions for efficient knowledge acquisition in LLMs, particularly for downstream tasks and domains with limited training data.},
+author = {Ma, Shengjie and Jiang, Xuhui and Xu, Chengjin and Yang, Cehao and Zhang, Liyu and Mao, Jiaxin and Guo, Jian},
+openreview = {mkx3UyFPLl},
+pages = {29:1--29:19},
+section = {Poster Presentations},
+title = {Synthesize-on-Graph: Knowledgeable Synthetic Data Generation for Continued Pre-training of Large Language Models}
+}
+
+@inproceedings{marcoccia25a,
+abstract = {In this paper, we present TopoFormer, a powerful architecture for predicting links between communication nodes in mobile networks. The goal is to imitate, in real time, the results of a costly combinatorial algorithm that generates topologies for networks with directional antennas. These antennas offer excellent performance but require complex, interdependent steering decisions in real time. Our Transformer-based architecture is enhanced with efficient components that add useful inductive biases, making it suitable for environments where scaling is limited. A key contribution is the introduction of directional density encodings, which help the attention mechanism better separate nodes in dense clusters. Equipped with our modules, a single Transformer block of dimension 12 achieves over 95 % accuracy, reducing the gap to optimality by half compared to a plain 1-block Transformer while requiring only 12 % more computation. Using two blocks, the model comes close to perfect accuracy.},
+author = {Marcoccia, Félix and Fagoo, Victor and Julien, Gilles Monzat de Saint and Adjih, Cédric and Watteyne, Thomas and Mühlethaler, Paul},
+openreview = {Y7VOUTjPeY},
+pages = {30:1--30:13},
+section = {Poster Presentations},
+title = {TopoFormer: An Efficient Link-Set Prediction Architecture for Ad Hoc Network Topology Generation}
+}
+
+@inproceedings{zheng25b,
+abstract = {Recent advances in recommendation with large language models (LLMs) often rely on either commonsense augmentation at the item-category level or implicit intent modeling on existing knowledge graphs. However, such approaches struggle to capture grounded user intents and to handle sparsity and cold-start scenarios. In this work, we present LLM-based Intent Knowledge Graph Recommender (IKGR), a novel framework that constructs an intent-centric knowledge graph where both users and items are explicitly linked to intent nodes extracted by a tuning-free, RAG-guided LLM pipeline. By grounding intents in external knowledge sources and user profiles, IKGR canonically represents what a user seeks and what an item satisfies as first-class entities. To alleviate sparsity, we further introduce a mutual-intent connectivity densification strategy, which shortens semantic paths between users and long-tail items without requiring cross-graph fusion. Finally, a lightweight GNN layer is employed on top of the intent-enhanced graph to produce recommendation signals with low latency. Extensive experiments on public and enterprise datasets demonstrate that IKGR consistently outperforms strong baselines, particularly on cold-start and long-tail slices, while remaining efficient through a fully offline LLM pipeline.},
+author = {Zheng, Wenqing and Fatsi, Noah and Barcklow, Daniel and Kalaev, Dmitri and Yao, Steven and Reinert, Owen and Bruss, C. Bayan and Rosa, Daniele},
+openreview = {oYnXboHALK},
+pages = {31:1--31:17},
+section = {Poster Presentations},
+software = {https://github.com/CapitalOne-Research/IKGR},
+title = {Tuning-Free LLM Can Build A Strong Recommender Under Sparse Connectivity And Knowledge Gap Via Extracting Intent}
+}
+
+@inproceedings{qin25a,
+abstract = {Link prediction is a crucial graph-learning task. Distilling Graph Neural Networks (GNNs) teachers into Multi-Layer Perceptrons (MLPs) students has emerged as an effective approach to achieve strong performance and reducing computational cost by removing graph dependency in the inference stage, especially in applications such as citation prediction and product recommendation where node features are abundant. However, existing distillation methods only use standard GNNs. Do stronger models such as those specially designed for link prediction (e.g., GNN4LP) lead to better students? Are heuristic-based methods (e.g., common neighbors) are bad teachers as they are weak models? This paper first explores the impact of different teachers in MLP distillation. Surprisingly, we find that stronger models do not always produce stronger students: MLPs distilled from GNN4LP can underperform those distilled from simpler GNNs, while weaker heuristic methods can teach MLPs to near-GNN performance with drastically reduced training costs. We provide both theoretical and empirical analysis to explain this phenomenon, revealing that a teacher is only as good as its teachable knowledge, the portion of its knowledge that can be transferred through the features accessible to the student. Building on these insights, we propose Ensemble Heuristic-Distilled MLPs (EHDM), which eliminates costly GNN training while effectively integrating complementary heuristic signals via a gating mechanism. Our extensive experiments show EHDM reduces the total training time by 1.95-3.32x while achieving an average 7.93% improvement over previous GNN-to-MLP approaches, indicating it is an efficient and effective link prediction method.},
+author = {Qin, Zongyue and Zhang, Shichang and Ju, Mingxuan and Zhao, Tong and Shah, Neil and Sun, Yizhou},
+openreview = {TSwEOuoO00},
+pages = {32:1--32:20},
+section = {Poster Presentations},
+title = {Weak Models Can be Good Teachers: A Case Study on Link Prediction with MLPs}
+}
+
+@inproceedings{xu25a,
+abstract = {Graphs provide a unified representation of semantic content and relational structure, making them a natural fit for domains such as molecular modeling, citation networks, and social graphs. Meanwhile, large language models (LLMs) have excelled at understanding natural language and integrating cross-modal signals, sparking interest in their potential for graph reasoning. Recent work has explored this by either designing template-based graph templates or using graph neural networks (GNNs) to encode structural information. In this study, we investigate how different strategies for encoding graph structure affect LLM performance on text-attributed graphs. Surprisingly, our systematic experiments reveal that: (i) LLMs leveraging only node textual descriptions already achieve strong performance across tasks; and (ii) most structural encoding strategies offer marginal or even negative gains. We show that explicit structural priors are often unnecessary and, in some cases, counterproductive when powerful language models are involved. This represents a significant departure from traditional graph learning paradigms and highlights the need to rethink how structure should be represented and utilized in the LLM era. **Our study is to systematically challenge the foundational assumption that structure is inherently beneficial for LLM-based graph reasoning, opening the door to new, semantics-driven approaches for graph learning**.},
+author = {Xu, Haotian and You, Yuning and Ma, Tengfei},
+openreview = {ijQTdlHJze},
+pages = {33:1--33:16},
+section = {Poster Presentations},
+title = {When Structure Doesn’t Help: LLMs Do Not Read Text-Attributed Graphs as Effectively as We Expected}
+}
